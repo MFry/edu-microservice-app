@@ -5,6 +5,9 @@ from flask import Flask, jsonify
 # instantiate the app
 app = Flask(__name__)
 
+# set config
+app.config.from_object('project.config.DevelopmentConfig')
+
 
 @app.route('/')
 def hello_world():
