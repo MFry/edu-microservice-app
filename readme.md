@@ -17,9 +17,25 @@
  source env/bin/activate
 ```
 
-To run the cli where `__init__.py` is the flask app and `manage.py` is the CLI wrapper.
+To run the CLI where `__init__.py` is the flask app and `manage.py` is the CLI wrapper.
 
 ```
   FLASK_APP=project/__init__.py
   python manage.py run --host='0.0.0.0'
 ```
+
+To set CLI in debug mode
+
+```
+  export FLASK_DEBUG=1
+```
+
+## Docker
+
+To set docker `env` variables, after running
+
+```
+docker-machine env dev-machine -shell cmd
+```
+
+run the last `REM` line without the `REM`
